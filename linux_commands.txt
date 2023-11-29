@@ -1,0 +1,40 @@
+2:Write down Linux commands for following statements: 
+i. Redirect the output of ls command to a file named outfile. Use this asaninput file for remaining commands. 
+ii. To select the lines in a file which has digit as one of the character inthatline and redirect the output to the file named list. 
+iii. Assign execute permission to owner and remove read permissionfromother for an ordinary file named test by relative way. 
+iv. Create an alias named rm that always deletes file interactively. 
+v. Count the currently login users to the system.
+
+1: ls >> outfile
+2: grep "[0-9]" file >> list
+3: chmod u+x test ;chmod o-r test
+4: alias rm='rm -i'
+5: who
+
+18: Write down Linux commands for following statements: 
+i. To redirect the output of cp command to a file named outfile. Use this as an input file for remaining commands. 
+ii. To select the lines in a file which has 4 letter words in that lineandredirect the output to the file named list. 
+iii. Assign write permission to owner and remove read permissionfromgroup user for an ordinary file named test by relative way. 
+iv. Create an alias named ls that always lists all the files includinghiddenfiles. 
+v. Count the number of words in the list file.
+
+1: cp a.txt b.txt >> outfile
+2: cat a.txt | grep " [a-z][a-z][a-z][a-z] " >> b.txt
+3: chmod u=w test ;chmod o-x test
+4: alias ls="ls -A"
+5: wc -m test
+
+19: Write down Linux commands for following statements: 
+a. Redirect the output of mv command to a file named outfile. Use this as an input file for remaining commands. 
+b. List all hidden files under current directory and store in “hidden”file 
+c. Assign write permission to group user and remove execute permission from owner for an ordinary file named test by absolute way 
+d. To create soft and hard link for given file e. To convert lowercase to upper case of a given file 
+f. To extract 2nd and 3rd character of a given file g. To display how many times lines are repeated in a given file
+
+1: mv a.txt b.txt >> outfile
+2: ls -ld .?* >> hidden
+3: chmod u=w test ;chmod o-x test
+4: ln  1.txt 2.txt ;ln -s 1.txt 3.txt
+5: tr [:lower:] [:upper:] < input.txt >> output.txt
+6: cat file | cut -c 2,3
+7: uniq -D file
